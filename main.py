@@ -1,6 +1,7 @@
 from flask import Flask, request, jsonify
 import tools.grabber as grab
 import tools.postdata as pos
+import tools.sentiment as sent
 import json
 import markdown.extensions.fenced_code
 
@@ -39,7 +40,12 @@ def add_speech():
     pos.insert_speech(name,year,text)
     return "Succesfully added speech to database!"
 
+# SENTIMENT ANALYSIS
 
+@app.route('/sentiment')
+def sentim_all():
+    sentim = sent.generate_sentim()
+    return sentim
 
 
 app.run("localhost",5000, debug=True)
