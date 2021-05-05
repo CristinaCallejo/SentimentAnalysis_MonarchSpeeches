@@ -1,7 +1,5 @@
-# repo
-template
-"""
-import markdown.extensions.fenced_code
+# SAMS: Sentiment Analysis for Speeches from the monarchs in Spain
+
 
 
 RECAP 
@@ -12,3 +10,34 @@ Hacer más endpoints
 Hacer endpoints de POST
 Borrar la BBDD y utilizar esos endpoints de POST para añadirla a través de la API
 Hacer sentiment analysis & visualización"
+
+### @GET
+
+#### GET examples:
+
+"""
+urlbase = "http://localhost:5000/"
+# resp_base = requests.get(urlbase)
+# resp_base.content
+
+urlspeeches = "http://localhost:5000/speeches"
+
+urlyear = "http://localhost:5000/speeches/<year>"
+# year = 2012
+# end = f"speeches/{year}"
+# endpoint=urlbase+end
+# resp_year = requests.get(endpoint).json()
+# resp_year
+
+"""
+
+
+### @POST
+
+### POST examples:
+
+"""
+urladd = "http://localhost:5000/speeches/new"
+show = requests.post(urladd, data=juanq_dic)
+show.content
+"""

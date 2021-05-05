@@ -11,10 +11,9 @@ app = Flask(__name__)
 
 @app.route("/")
 def landing():
-    readme = open("README.md", "r")
-    md_template = markdown.markdown(
-        readme.read(), 
-        extensions= ["fenced_code"]
+    readme_file = open("Readme.md", "r")
+    md_template = markdown.markdown( 
+        readme_file.read(), extensions=["fenced_code"]
     )
     return md_template
 
@@ -30,25 +29,6 @@ def find_per_year(year):
     per_year= grab.yearly_speeches(year)
     return per_year
 
-
-# GET examples:
-
-"""
-urlbase = "http://localhost:5000/"
-# resp_base = requests.get(urlbase)
-# resp_base.content
-
-urlspeeches = "http://localhost:5000/speeches"
-
-urlyear = "http://localhost:5000/speeches/<year>"
-# year = 2012
-# end = f"speeches/{year}"
-# endpoint=urlbase+end
-# resp_year = requests.get(endpoint).json()
-# resp_year
-
-"""
-
 # POST
 
 @app.route("/speeches/new", methods=["POST"])
@@ -60,13 +40,6 @@ def add_speech():
     return "Succesfully added speech to database!"
 
 
-# POST examples:
-
-"""
-urladd = "http://localhost:5000/speeches/new"
-show = requests.post(urladd, data=juanq_dic)
-show.content
-"""
 
 
 app.run("localhost",5000, debug=True)
