@@ -1,8 +1,10 @@
-# SAMS API: sentiment analysis for speeches from the monarchs in Spain.
+# SAMS API
 
+## sentiment analysis for speeches from the monarchs in Spain.
 
 
 RECAP 
+
 Elegir estructura base datos (SQL/Mongo. SQL puede ser más útil al ser relacional y evitar la duplicidad de datos)
 Cargar la BBDD a mano
 Hacer un endpoint de GET (el resto vienen solos)
