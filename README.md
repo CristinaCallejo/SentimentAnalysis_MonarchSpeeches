@@ -1,8 +1,10 @@
-# SAMS: Sentiment Analysis for Speeches from the monarchs in Spain
+# SAMS API
 
+## sentiment analysis for speeches from the monarchs in Spain.
 
 
 RECAP 
+
 Elegir estructura base datos (SQL/Mongo. SQL puede ser más útil al ser relacional y evitar la duplicidad de datos)
 Cargar la BBDD a mano
 Hacer un endpoint de GET (el resto vienen solos)
@@ -17,17 +19,17 @@ Hacer sentiment analysis & visualización"
 
 """
 urlbase = "http://localhost:5000/"
-# resp_base = requests.get(urlbase)
-# resp_base.content
+- resp_base = requests.get(urlbase)
+- resp_base.content
 
 urlspeeches = "http://localhost:5000/speeches"
 
 urlyear = "http://localhost:5000/speeches/<year>"
-# year = 2012
-# end = f"speeches/{year}"
-# endpoint=urlbase+end
-# resp_year = requests.get(endpoint).json()
-# resp_year
+- year = 2012
+- end = f"speeches/{year}"
+- endpoint=urlbase+end
+- resp_year = requests.get(endpoint).json()
+- resp_year
 
 """
 
